@@ -1,10 +1,10 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = 'Category';
+$this->title = 'Категории';
 ?>
 <div class="category-index">
 
-	<h1>Products</h1>
+	<h1>Продукты</h1>
 
 	<?php foreach($products as $product): ?>
 		<div class="row">
