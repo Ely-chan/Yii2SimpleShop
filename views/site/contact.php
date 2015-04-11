@@ -6,7 +6,7 @@ use yii\bootstrap\ActiveForm;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\ContactForm */
 
-$this->title = 'Обратная связь';
+$this->title = 'Отзыв';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
@@ -18,20 +18,15 @@ $this->params['breadcrumbs'][] = $this->title;
         Спасибо, что связались с нами. Мы ответим вам, как можно быстрее.
     </div>
 
-    <p>
-        Обратите внимание, что если вы включите Yii - отладчик вы должны прочесть сообщение на почтовой панели отладчика
-        <?php if (Yii::$app->mailer->useFileTransport): ?>
-            Так как приложение находится в разработке, электронная почта не отправляется, но сохраняется в виде файла.
-            <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-        Please configure the <code>useFileTransport</code> property of the <code>mail</code>
-        application component to be false to enable email sending.
-        <?php endif; ?>
+         <p>
+
     </p>
 
     <?php else: ?>
 
     <p>
-        Если у вас есть предложения или вопросы, пожалуйста, заполните следующую форму, чтобы связаться с нами. Спасибо. </p>
+        Свои вопросы и предложения вы можете оставить здесь.<br>
+        Пожалуйста, не забудте заполнить форму, чтобы связаться с нами.</p>
 
     <div class="row">
         <div class="col-lg-5">

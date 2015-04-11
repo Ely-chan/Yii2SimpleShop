@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\Basket;
 use app\models\BasketProduct;
 use app\models\ContactForm;
+use app\models\Orders;
 use app\models\Product;
 use Yii;
 use yii\web\Controller;
@@ -67,6 +68,9 @@ class BasketController extends Controller
         $basketProduct = new Basket(Yii::$app->user->identity);
         $basketProduct->addProduct($product);
 
+        $orders = new Orders();
+        $orders->addProduct($product);
+
         return Yii::$app->response->redirect(Yii::$app->urlManager->createUrl('basket'));
     }
 
@@ -80,6 +84,10 @@ class BasketController extends Controller
         $product->count++;
         $product->save();
 
+
+        $orders = new Orders();
+        $orders->addProduct($product->product);
+
         return Yii::$app->response->redirect(Yii::$app->urlManager->createUrl('basket'));
     }
 
@@ -91,6 +99,10 @@ class BasketController extends Controller
         }
 
         $product->count--;
+
+
+        $orders = new Orders();
+        $orders->removeProduct($product->product);
 
         if($product->count > 0)
         {

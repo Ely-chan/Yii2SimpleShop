@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "72384e57c73a5a4b96ff1c3a49a6081b",
+    "hash": "07081e287333e78a75e36210a3e12474",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -103,16 +103,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.1.61",
+            "version": "3.1.62",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-                "reference": "f2c086411d2557fc485c47afb3cecfa6c1de9ee2"
+                "reference": "da1a274cefa18a52a0519ac7ffe8e8d31e950eae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/f2c086411d2557fc485c47afb3cecfa6c1de9ee2",
-                "reference": "f2c086411d2557fc485c47afb3cecfa6c1de9ee2",
+                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/da1a274cefa18a52a0519ac7ffe8e8d31e950eae",
+                "reference": "da1a274cefa18a52a0519ac7ffe8e8d31e950eae",
                 "shasum": ""
             },
             "require": {
@@ -380,12 +380,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "6b8da53205fd8b934b12a84f4418c6abb5d4714f"
+                "reference": "14da7cbf6f6ee367340836053234d95a902db427"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/6b8da53205fd8b934b12a84f4418c6abb5d4714f",
-                "reference": "6b8da53205fd8b934b12a84f4418c6abb5d4714f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/14da7cbf6f6ee367340836053234d95a902db427",
+                "reference": "14da7cbf6f6ee367340836053234d95a902db427",
                 "shasum": ""
             },
             "require": {
@@ -460,7 +460,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-03-27 02:57:27"
+            "time": "2015-03-28 02:52:01"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -749,7 +749,7 @@
             ],
             "authors": [
                 {
-                    "name": "François Zaninotto"
+                    "name": "Francois Zaninotto"
                 }
             ],
             "description": "Faker is a PHP library that generates fake data for you.",

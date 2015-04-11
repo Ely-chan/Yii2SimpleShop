@@ -20,13 +20,43 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body background="../images/46.png">>
+<body background="../images/12.jpg" onload="window.setTimeout('getSecs()',1)">
+
+<script language="JavaScript">
+    startday = new Date();
+    clockStart = startday.getTime();
+
+    function initStopwatch() {
+        var myTime = new Date();
+        var timeNow = myTime.getTime();
+        var timeDiff = timeNow - clockStart;
+        this.diffSecs = timeDiff/1000;
+        return(this.diffSecs); }
+
+    function getSecs() {
+        var mySecs = initStopwatch();
+        var mySecs1 = ""+mySecs;
+        mySecs1= mySecs1.substring(0,mySecs1.indexOf(".")) + " сек.";
+        document.forms[0].timespent.value = mySecs1
+        window.setTimeout('getSecs()',1000); }
+
+</script>
+
+<form>
+    <p align="center"><strong>
+            Вы находитесь на этой странице уже:</strong></font>
+        <input type="text" size="9" name="timespent"></p>
+</form>
+
+
+
 
 <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'Корзинка',
+
+                'brandLabel' => 'Электронная техника Computers',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'myimage',
@@ -36,7 +66,7 @@ AppAsset::register($this);
 	        $items = [
 		        ['label' => 'Главная', 'url' => ['/site/index']],
 		        ['label' => 'Контакты', 'url' => ['/site/about']],
-		        ['label' => 'Обратная связь', 'url' => ['/site/contact']],
+		        ['label' => 'Отзыв', 'url' => ['/site/contact']],
 		        Yii::$app->user->isGuest ?
 			        ['label' => 'Войти', 'url' => ['/site/login']] :
 			        ['label' => 'Выход (' . Yii::$app->user->identity->username . ')',
@@ -46,12 +76,13 @@ AppAsset::register($this);
 
             if(!Yii::$app->user->isGuest && Yii::$app->user->identity->is_admin)
             {
-                $items[] = ['label' => 'Редактироваль пользователей', 'url' => ['/admin-user']];
-                $items[] = ['label' => 'Редактировать карзины', 'url' => ['/admin-basket-product']];
-                $items[] = ['label' => 'Редактировать категории', 'url' => ['/admin-category']];
-                $items[] = ['label' => 'Редактировать продукты', 'url' => ['/admin-product']];
-                $items[] = ['label' => 'Редактировать атрибуты продуктов', 'url' => ['/admin-product-attribute']];
-                $items[] = ['label' => 'Редактировать типы атрибутов', 'url' => ['/admin-product-attribute-type']];
+                $items[] = ['label' => 'Заказы', 'url' => ['/orders']];
+                $items[] = ['label' => 'Редактирование пользователя', 'url' => ['/admin-user']];
+                $items[] = ['label' => 'Редактирование корзины', 'url' => ['/admin-basket-product']];
+                $items[] = ['label' => 'Редактирование категории', 'url' => ['/admin-category']];
+                $items[] = ['label' => 'Редактирование товаров', 'url' => ['/admin-product']];
+                $items[] = ['label' => 'Редактирование атрибутов товара', 'url' => ['/admin-product-attribute']];
+                $items[] = ['label' => 'Редактирование типов атрибута', 'url' => ['/admin-product-attribute-type']];
             }
 
             if(!Yii::$app->user->isGuest)
@@ -85,8 +116,8 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; Корзинка <?= date('Y') ?></p>
-            <p class="pull-right"><?= 'Made in china' ?></p>
+            <p class="pull-left">&copy; Компьютер <?= date('Y') ?></p>
+            <p class="pull-right"><?= 'Computers' ?></p>
         </div>
     </footer>
 

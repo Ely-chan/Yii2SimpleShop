@@ -4,7 +4,7 @@ $this->title = 'Категории';
 ?>
 <div class="category-index">
 
-	<h1>Продукты</h1>
+	<h1>Техника</h1>
 
 	<?php foreach($products as $product): ?>
 		<div class="row">
@@ -13,6 +13,7 @@ $this->title = 'Категории';
 					<h2><?php echo $product->name; ?></h2>
 					<div class="badge badge-inverse">Стоимость: <?php echo $product->price; ?></div>
                     <?php echo $product->description; ?>
+                    <img src="<?php echo $product->img; ?>" />
 
                     <div>
                         <?php foreach($product->attributes as $attribute): ?>
